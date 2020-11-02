@@ -1,0 +1,97 @@
+body {
+    background-color: #F4CBAF;
+    font-family: "Jost";
+    font-size: 18px;
+    margin: 2rem;
+    padding: 1rem;
+    text-align: left;
+}
+
+/* Taken from https://www.w3schools.com/howto/howto_css_parallax.asp */
+.parallax {
+  background-image: url('orchard.jpg');
+
+  height: 750px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+.kanyeParallax {
+  background-image: url('albums1.jpg');
+
+  height: 1000px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .kanyeParallax {
+    background-attachment: scroll;
+  }
+}
+
+.bigboyheader {
+    background-color: #F77271;
+    color: #F8E9CA;
+    padding: 3rem;
+}
+
+h1 {
+    font-family: "Chelsea Market";
+    font-size: 108px;
+}
+
+.section {
+    font-family: "Chelsea Market";
+    font-size: 22px;
+}
+
+button {
+    background-color: #F79E8C;
+}
+
+footer {
+    font-family: "Jost";
+    font-size: 14px;
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* Help from https://www.w3schools.com/howto/howto_css_image_center.asp */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.centered {
+    text-align: center;
+}
+
+a:link{
+    color: #F79E8C;
+}
+
+a:visited {
+    color: #F77271;
+}
+
+

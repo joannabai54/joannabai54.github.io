@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!--taken from Bootstrap to make page mobile friendly; https://getbootstrap.com/docs/4.5/getting-started/introduction/#starter-template -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+
+        <!-- Linked google fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Chelsea%20Market' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'>
+
+        <title>Home Page</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // changes button color on click
+                let button = document.querySelectorAll('button');
+                for (let i = 0; i < button.length; i++) {
+                    button[i].addEventListener('click', function() {
+                        button[i].style.backgroundColor = '#F77271';
+                    })
+                };
+
+                // Redirects to recipe.html if correct password is entered
+                let confirm = document.querySelector('.check');
+                confirm.addEventListener('click', function() {
+                    let answer = document.querySelector('input');
+                    if (answer.value.toUpperCase() === 'MAYBE WE GOT LOST IN TRANSLATION MAYBE I ASKED FOR TOO MUCH BUT MAYBE THIS THING WAS A MASTERPIECE UNTIL YOU TORE IT ALL UP') {
+                        answer.style.backgroundColor = 'green';
+                        window.open('kanye.html');
+                    }
+
+                    else {
+                        answer.style.backgroundColor = 'red';
+                        document.querySelector('#reveal').innerHTML = 'Incorrect.';
+                    }
+                });
+
+                // Hover over the footer button to reveal the password
+                let hover = document.querySelector('.hover');
+                hover.addEventListener('mouseover', function() {
+                    hover.innerHTML = 'MAYBE WE GOT LOST IN TRANSLATION MAYBE I ASKED FOR TOO MUCH BUT MAYBE THIS THING WAS A MASTERPIECE UNTIL YOU TORE IT ALL UP';
+                });
+
+            });
+
+        </script>
+
+    </head>
+
+    <body>
+
+    <!-- From https://www.w3schools.com/howto/howto_css_parallax.asp -->
+    <div class="parallax"></div>
+
+    <div class='bigboyheader centered'>
+        <h1>MEET J MONEY</h1>
+    </div>
+
+    <div class='header'>
+        <hr>
+        <p>Heyo! My name is Joanna Bai! I'm a first year student at Harvard University studying computer science and special education.
+        I just got off of a gap year where I worked in a K-2 grade special education classroom.
+        I am from Omaha, Nebraska and do indeed believe corn is the most elite side one could choose for a meal.
+        My top five favorite artists are Taylor Swift, Kanye West (lmao I know..), Brockhampton, Of Monsters and Men, and One Direction.
+        In terms of food, I am a diehard for spaghetti tacos and Sweetgreen.
+        </p>
+
+        <p>I believe that Genghis Khan is the greatest emperor the world has ever seen, but standard curriculum is too eurocentric to acknowledge that.
+        I would punch Napoleon Bonaparte in the face if I ever had the chance.
+        Additionally, I am starting a petition to make 0! be undefined. Mathematicians made 0! equal 1 for the sake of allowing other things (like series) to make sense (don't fact check me on this).
+        HOWEVER, it just does not make sense. When we compute a factorial, the calculation ceases at ONE. For example, 5! is 5*4*3*2*1, and we don't multiply by 0 because it would just equal 0.
+        Just like we cannot calculate the factorial of a negative number, we should not be able to calculate 0!
+        0! makes me so mad; I would love to discuss this further if you care. Which you probably don't... which is understandable.
+        </p>
+
+        <p>I own six Build-A-Bear teddy bears, and they have my whole entire heart. Their names are Bentley, Nugget, Avery Rose, Hazel Grace, Chester, and Merlyn Wood.
+        I am an absolute God at Wii Bowling and embarassingly awful at catch. At any given moment, you can find me chilling at Barnes and Noble or walking in the park.
+        </p>
+
+        <!--Links to separate html page-->
+        <a href='joanna.html'>
+            CLICK HERE TO SEE ME CLEAR A TEN FOOT WALL. **NOT CLICKBAIT**
+        </a>
+
+        <hr>
+    </div>
+
+    <div>
+        <!-- Links to my spotify playlists... I may be biased but I think they're fire-->
+        <h2 class='section'> Need a new music vibe? Check out one of my spotify playlists. I won't let you down. Pinky promise.</h2>
+
+        <a class='btn btn-outline-dark' href='https://open.spotify.com/playlist/59GzlkfZdkDnAaEI8jFPVa?si=qmRdbZ3GS4CqSx2GbjCXLA/' role='button'>
+            "windin & grindin"
+        </a>
+
+        <a class='btn btn-outline-dark' href='https://open.spotify.com/playlist/6fpNL4YtFEj9JDQF6SdcWG?si=Z9VC4pQeRhSnC8C3po5Lhw/' role='button'>
+            "ethereal"
+        </a>
+
+        <a class='btn btn-outline-dark' href='https://open.spotify.com/playlist/5JGQqJV6bWnq4zLOzSoxKO?si=dlA6BK9CRC-HndSMQ4-tRw/' role='button'>
+            lemme try a taste of it all
+        </a>
+
+        <hr>
+    </div>
+
+    <!--Spooky, mysterious password entering in order to link to recipe.html... checking is implemented in js-->
+    <div>
+        <p>You won't regret this.</p>
+        <input type='text' placeholder='Enter the Password'>
+        <button class='check'>Submit</button>
+
+        <p id='reveal'></p>
+
+    </div>
+
+    <hr>
+    <div>
+        <!--Link to my kanye.html page... the bread and butter-->
+        <p>For a comprehensive blog post about Kanye West's best songs, check <a href='kanye.html'>this</a> out.</p>
+    </div>
+
+    <footer>
+        <!-- Reveals password! All Too Well by Taylor Swift goes so hard-->
+        <p>the password is</p>
+        <button class='hover bold'>uhh...</button>
+    </footer>
+    </body>
+
+</html>
